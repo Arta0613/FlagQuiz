@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/decelerate_interpolator">
+
+    <!--From absolute value 0
+        Go to the left (-5%) of the parents width (p)
+        To move any percent of the "view" itself, remove the p
+        Duration is in milliseconds, this is how long the animation will last-->
+    <translate
+        android:duration="100"
+        android:fromXDelta="0"
+        android:toXDelta="-5%p" />
+
+    <!--Animations happen in parallel but you can use
+        startOffset to specify when you want the animation to start-->
+    <translate
+        android:duration="100"
+        android:fromXDelta="-5%p"
+        android:startOffset="100"
+        android:toXDelta="5%p" />
+    <translate
+        android:duration="100"
+        android:fromXDelta="5%p"
+        android:startOffset="200"
+        android:toXDelta="-5%p" />
+
+</set>
