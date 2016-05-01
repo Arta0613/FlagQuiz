@@ -132,9 +132,7 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             // Must select one region -- set North America as default
                             SharedPreferences.Editor editor = sharedPreferences.edit();
-                            if (regions != null) {
-                                regions.add(getString(R.string.default_region));
-                            }
+                            regions.add(getString(R.string.default_region));
                             editor.putStringSet(REGIONS, regions);
                             editor.apply();
 

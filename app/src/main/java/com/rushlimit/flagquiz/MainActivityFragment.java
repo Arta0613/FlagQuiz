@@ -107,7 +107,7 @@ public class MainActivityFragment extends Fragment {
 
         // Hide all guess button LinearLayouts
         for (LinearLayout layout : guessLinearLayouts) {
-            layout.setVerticalGravity(View.GONE);
+            layout.setVisibility(View.GONE);
         }
 
         // Display appropriate guess button LinearLayouts
@@ -222,7 +222,7 @@ public class MainActivityFragment extends Fragment {
 
     // Parses the country flag file name and returns the country name
     private String getCountryName(String name) {
-        return name.substring(name.indexOf("-") + 1).replace("_", "");
+        return name.substring(name.indexOf('-') + 1).replace('_', ' ');
     }
 
     // Animates the entire quizLinearLayout on or off screen
